@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[3.5.1];shiny[1.5.0];bootstrap[3.4.1]</script>
+<script src="shared/json2-min.js"></script>
+<script src="shared/jquery.min.js"></script>
+<link href="shared/shiny.css" rel="stylesheet" />
+<script src="shared/shiny.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="shared/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<script src="shared/bootstrap/js/bootstrap.min.js"></script>
+<script src="shared/bootstrap/shim/html5shiv.min.js"></script>
+<script src="shared/bootstrap/shim/respond.min.js"></script>  <title>Next text prediction</title>
+  <title>
+    <h4>
+      <em>This app aims to predict the next word when you enter text.
+The model works depending on the type of situation. It allows you to predict according to what you write, a blog, a news, or a tweet.
+It predicts the 3 most popular words.
+The words appearing before the entry are the 3 most used words for each type of text.</em>
+    </h4>
+  </title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="col-sm-12">
+      <h1>Next text prediction</h1>
+    </div>
+    <div class="col-sm-12">
+      <h1>
+        <h4>
+          <em>This app aims to predict the next word when you enter text.
+The model works depending on the type of situation. It allows you to predict according to what you write, a blog, a news, or a tweet.
+It predicts the 3 most popular words.
+The words appearing before the entry are the 3 most used words for each type of text.</em>
+        </h4>
+      </h1>
+    </div>
+    <div class="col-sm-8">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="user_textb">Prediction if you write a blog</label>
+        <input id="user_textb" type="text" class="form-control" value="" placeholder="Please enter some text."/>
+      </div>
+      <pre id="textb" class="shiny-text-output noplaceholder"></pre>
+    </div>
+    <div class="col-sm-8">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="user_textn">prediction if you write a New</label>
+        <input id="user_textn" type="text" class="form-control" value="" placeholder="Please enter some text."/>
+      </div>
+      <pre id="textn" class="shiny-text-output noplaceholder"></pre>
+    </div>
+    <div class="col-sm-8">
+      <div class="form-group shiny-input-container">
+        <label class="control-label" for="user_textt">prediction if you write a Twitter Post</label>
+        <input id="user_textt" type="text" class="form-control" value="" placeholder="Please enter some text."/>
+      </div>
+      <pre id="textt" class="shiny-text-output noplaceholder"></pre>
+    </div>
+  </div>
+</body>
+</html>
